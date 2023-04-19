@@ -1,0 +1,29 @@
+include-file = modules.ini
+[bar/root]
+width = 10%
+height = 1%
+override-redirect = true
+
+[bar/back]
+; empty bar to achieve the needed space, without this, the modules 'float on top of the windows'
+; You can spot the 1 px sized bar on the left if you insist to try.
+inherit = bar/root
+width = 1
+override-redirect = false
+modules-left = i3
+
+[bar/left]
+inherit = bar/root
+modules-center = xwindow
+offset-x = 20%
+
+[bar/center]
+width = 14%
+inherit = bar/root
+modules-center = xworkspaces
+offset-x = 43%
+
+[bar/right]
+inherit = bar/root
+modules-center = date
+offset-x = 70%
